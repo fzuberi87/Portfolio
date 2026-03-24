@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Export as a fully static site (plain HTML/CSS/JS — no Node.js server needed)
+  output: "export",
   images: {
-    // Allow any external image domain you use for your case study images.
-    // Add domains here as needed, e.g.:
-    // domains: ["images.unsplash.com"],
-    unoptimized: false,
+    // Required for static export — images are served as-is without optimization
+    unoptimized: true,
   },
 };
 
