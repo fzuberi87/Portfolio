@@ -1,0 +1,61 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "media"
+public_folder: "/media"
+
+collections:
+  - name: "settings"
+    label: "Site settings"
+    files:
+      - label: "Site settings"
+        name: "site"
+        file: "content/site.json"
+        fields:
+          - { label: "Role", name: "role", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - { label: "Availability", name: "availability", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+
+  - name: "projects"
+    label: "Projects"
+    file: "content/projects.json"
+    fields:
+      - label: "Projects"
+        name: "projects"
+        widget: "list"
+        summary: "{{fields.title}} — {{fields.discipline}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Index title", name: "indexTitle", widget: "string", required: false, hint: "Company / project name shown in the left index" }
+          - { label: "Index intro", name: "indexIntro", widget: "string", required: false, hint: "Short sentence shown below the index title" }
+          - { label: "Slug", name: "slug", widget: "string", hint: "Lowercase URL name, for example quiet-interface" }
+          - { label: "Discipline", name: "discipline", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Year", name: "year", widget: "string" }
+          - { label: "Tags", name: "tags", widget: "list", field: { label: "Tag", name: "tag", widget: "string" } }
+          - { label: "Visual theme", name: "theme", widget: "select", options: ["orbit", "signal", "lattice", "field", "blank"] }
+          - { label: "Artwork label", name: "artLabel", widget: "string", hint: "Short text shown inside the abstract artwork" }
+          - { label: "Accent color", name: "accent", widget: "color", default: "#d4ddaa" }
+          - { label: "Featured", name: "featured", widget: "boolean", default: false }
+          - { label: "Published", name: "published", widget: "boolean", default: true }
+          - { label: "Cover image", name: "cover", widget: "image", required: false }
+          - { label: "Hero image", name: "hero", widget: "image", required: false }
+          - { label: "Gallery images", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" }, required: false }
+          - { label: "Overview heading", name: "overviewHeading", widget: "string", required: false, hint: "Short thesis shown above the detailed case study" }
+          - { label: "Outcome", name: "outcome", widget: "text", required: false }
+          - label: "Case study sections"
+            name: "sections"
+            widget: "list"
+            required: false
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "string", required: false }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Quote", name: "quote", widget: "text", required: false }
+              - { label: "Section image", name: "image", widget: "image", required: false }
+          - { label: "External project URL", name: "url", widget: "string", required: false }
