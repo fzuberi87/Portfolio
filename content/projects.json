@@ -1,0 +1,134 @@
+{
+  "projects": [
+    {
+      "slug": "allie",
+      "sourceHeading": "Allie",
+      "title": "Allie",
+      "indexTitle": "Allie",
+      "indexIntro": "Lead UI/UX and AI Design",
+      "discipline": "UX & UI Lead",
+      "description": "Turning an internal AI tool into a product clients would buy.",
+      "year": "",
+      "tags": ["Product", "AI", "Design Systems"],
+      "theme": "orbit",
+      "artLabel": "Allie",
+      "accent": "#c8d89e",
+      "featured": true,
+      "published": true,
+      "cover": "media/projects/allie/cover-large.png",
+      "hero": "media/projects/allie/cover-large.png",
+      "gallery": [],
+      "comparison": {
+        "light": "media/projects/allie/new-chat-light.png",
+        "dark": "media/projects/allie/new-chat-dark.png",
+        "label": "Light and dark mode"
+      },
+      "sectionImages": {
+        "Overview": ["media/projects/allie/allie-in-context.png"],
+        "Research": ["media/projects/allie/allie-old.png"],
+        "Building the design system": [
+          "media/projects/allie/allie-colors.png",
+          "media/projects/allie/allie-components.png",
+          "media/projects/allie/allie-component-states.png"
+        ],
+        "Designing with AI in the loop": [
+          "media/projects/allie/designing-with-ai.png",
+          "media/projects/allie/process-with-ai.png"
+        ]
+      },
+      "url": "",
+      "sections": []
+    },
+    {
+      "slug": "codeai-redesign",
+      "sourceHeading": "Caris Life Sciences: CODEai",
+      "title": "Caris Life Sciences: CODEai",
+      "indexTitle": "CODEai for Caris Life Sciences",
+      "indexIntro": "Lead UX Design",
+      "discipline": "UX Lead",
+      "description": "Redesigning cohort analysis for researchers and clinicians.",
+      "year": "",
+      "tags": ["Product", "Healthcare", "AI"],
+      "theme": "orbit",
+      "artLabel": "CODEai",
+      "accent": "#86cfd1",
+      "featured": false,
+      "published": true,
+      "cover": "media/projects/codeai-redesign/cover.jpg",
+      "hero": "media/projects/codeai-redesign/hero.jpg",
+      "gallery": ["media/projects/codeai-redesign/gallery-01.jpg", "media/projects/codeai-redesign/gallery-02.jpg"],
+      "url": "https://www.carislifesciences.com/",
+      "sections": []
+    },
+    {
+      "slug": "redfin-renovations",
+      "sourceHeading": "Redfin: Change Orders",
+      "title": "Redfin: Change Orders",
+      "indexTitle": "Change Orders for Redfin",
+      "indexIntro": "Lead Product Design",
+      "discipline": "Lead Product Designer",
+      "description": "Bringing a scattered, manual workflow into one system.",
+      "year": "",
+      "tags": ["Product", "Research", "Systems"],
+      "theme": "signal",
+      "artLabel": "Redfin",
+      "accent": "#d39a81",
+      "featured": false,
+      "published": true,
+      "cover": "media/projects/redfin-renovations/cover.jpg",
+      "hero": "",
+      "gallery": ["media/projects/redfin-renovations/journey.png", "media/projects/redfin-renovations/change-order.png", "media/projects/redfin-renovations/final-design.png"],
+      "url": "https://www.redfin.com",
+      "sections": []
+    },
+    {
+      "slug": "creamwala",
+      "sourceHeading": "Creamwala",
+      "title": "Creamwala",
+      "indexTitle": "Creamwala",
+      "indexIntro": "Founder and Creative Lead",
+      "discipline": "Founder & Creative Lead",
+      "description": "Building a Pakistani-American ice cream brand from the ground up.",
+      "year": "",
+      "tags": ["Brand", "Identity", "Founder"],
+      "theme": "lattice",
+      "artLabel": "Creamwala",
+      "accent": "#d7c19e",
+      "featured": false,
+      "published": true,
+      "cover": "media/projects/creamwala/cover.jpg",
+      "hero": "",
+      "gallery": ["media/projects/creamwala/gallery-01.jpg", "media/projects/creamwala/gallery-02.jpg", "media/projects/creamwala/gallery-03.jpg"],
+      "sectionImages": {
+        "Introduction": ["media/projects/creamwala/ice-cream-cups-mockup.jpg"],
+        "Execution": [
+          "media/projects/creamwala/gallery-04.jpg",
+          "media/projects/creamwala/gallery-05.jpg"
+        ]
+      },
+      "url": "https://creamwala.com",
+      "sections": []
+    },
+    {
+      "slug": "little-bites-urdu",
+      "sourceHeading": "Little Bites of Urdu",
+      "title": "Little Bites of Urdu",
+      "indexTitle": "Little Bites of Urdu",
+      "indexIntro": "Author and Designer",
+      "discipline": "Author & Designer",
+      "description": "Designing a premium cultural artifact for the Pakistani-American diaspora.",
+      "year": "",
+      "tags": ["Editorial", "Book", "Writing"],
+      "theme": "field",
+      "artLabel": "Little Bites",
+      "accent": "#c3b393",
+      "featured": false,
+      "published": true,
+      "cover": "media/projects/little-bites-urdu/cover.jpg",
+      "hero": "",
+      "gallery": ["media/projects/little-bites-urdu/gallery-01.jpg", "media/projects/little-bites-urdu/gallery-02.jpg"],
+      "url": "https://littlebitesofurdu.com",
+      "sections": []
+    }
+  ]
+}
