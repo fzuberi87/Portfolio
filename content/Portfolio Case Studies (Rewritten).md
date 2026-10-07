@@ -62,9 +62,9 @@ Stakeholders had already interviewed the two main user groups, researchers and c
 
 The original ask was a visual refresh, making CODEai look "slick and pretty." I pushed for a structural change instead: an Assisted mode that walks users through building a cohort step by step, and an Advanced mode that gives power users full control. That shifted the project from a visual refresh to a redesign of how people build cohorts. Neither group had to compromise for the other.
 
-![CODEai Molecular Assisted mode](media/projects/codeai-redesign/molecular-assisted-mode.jpg)
+![CODEai Molecular Assisted mode](media/projects/codeai-redesign/molecular-assisted-mode.webp)
 
-![CODEai Molecular Expert mode](media/projects/codeai-redesign/molecular-expert-mode.jpg)
+![CODEai Molecular Expert mode](media/projects/codeai-redesign/molecular-expert-mode.webp)
 
 ### **Execution**
 
@@ -151,25 +151,25 @@ More than revenue, the most validating outcome is how often people say: "It fina
 
 Creamwala's first brick-and-mortar scoop shop opens in Richardson in November/December 2026, if there are no hiccups. It's about 830 square feet, split roughly half back-of-house and half front-of-house, with hours built around our late-night peak. Going from events and wholesale to a physical space meant learning a set of disciplines I'd never touched before.
 
-![Creamwala store interior rendering](media/projects/creamwala/store-rendering.jpg)
+![Creamwala store interior rendering](media/projects/creamwala/store-rendering.webp)
 
 **MEPs and construction**
 
 Mechanical, electrical and plumbing drawings were completely new territory for me. Before anything could be drawn, we had to gather every piece of equipment we'd be using and check it against Richardson's city requirements for a new kitchen build: a 3-compartment sink, a mop sink, a prep sink, and a hand wash sink within 25 feet. When our MEP engineer/architect went unresponsive, I designed the layout entirely myself. That initial work really helped us, because we'd never worked with a commercial general contractor before, and our MEPs are what got construction started.
 
-![Creamwala store layout and floor plan](media/projects/creamwala/store-layout.jpg)
+![Creamwala store layout and floor plan](media/projects/creamwala/store-layout.webp)
 
 **Signage and the logo update**
 
 The original logo paired CREAMWALA with its Urdu equivalent. The sign called for a back-lit halo treatment, but Nastaliq is a delicate script and couldn't be milled the same way as the larger English wordmark. Removing the Urdu alone threw the whole mark off balance. So I redesigned the logo into two versions: an English-only mark for the sign, and an updated English/Urdu lockup built to stay consistent with it.
 
-![Creamwala exterior signage design](media/projects/creamwala/exterior-sign.jpg)
+![Creamwala exterior signage design](media/projects/creamwala/exterior-sign.webp)
 
 **Training**
 
 Most of our team will be part-time scoopers on their first or second job, with a shift lead layer above them. I watched hours of Chick-fil-A training videos and interviews with other food, beverage and hospitality groups, and drew from Unreasonable Hospitality, In-N-Out, Shake Shack and Preston Lee's thinking on staff buy-in. I used Claude to set the foundation for our training. The standards are specific: greet every guest within 5 seconds, arrive 5 minutes early, and check in at 30 and 90 days. The language in the trainings had to be clear, without our edgy, fun, hybrid English/Urdu brand voice.
 
-![Creamwala uniform looks](media/projects/creamwala/uniform.png)
+![Creamwala uniform looks](media/projects/creamwala/uniform.webp)
 
 **CreamOS**
 
