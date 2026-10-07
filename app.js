@@ -37,7 +37,7 @@ function renderArt(project, extraClass = "") {
 function renderIndex(projects) {
   const index = document.querySelector("#project-index");
   index.innerHTML = projects.map((project) => `
-    <a href="project.html?slug=${encodeURIComponent(project.slug)}" data-project-link="${escapeHTML(project.slug)}">
+    <a href="case-${encodeURIComponent(project.slug)}.html" data-project-link="${escapeHTML(project.slug)}">
       <span class="index-title">${escapeHTML(project.indexTitle || project.title)}</span>
       <span class="index-descriptor">${escapeHTML(project.indexIntro || project.description)}</span>
     </a>
@@ -51,12 +51,12 @@ function renderFeatured(project, count, index = 0) {
   featured.style.background = accent;
   featured.setAttribute("aria-label", `Selected work ${index + 1} of ${count}: ${project.title}`);
   featured.innerHTML = `
-    <a class="featured-link" href="project.html?slug=${encodeURIComponent(project.slug)}" aria-label="View ${escapeHTML(project.title)} case study">
+    <a class="featured-link" href="case-${encodeURIComponent(project.slug)}.html" aria-label="View ${escapeHTML(project.title)} case study">
       ${renderArt(project, "featured-art")}
     </a>
     <div class="featured-copy">
       <span class="eyebrow">${escapeHTML(project.discipline)}</span>
-      <h1><a href="project.html?slug=${encodeURIComponent(project.slug)}">${escapeHTML(project.title)}</a></h1>
+      <h1><a href="case-${encodeURIComponent(project.slug)}.html">${escapeHTML(project.title)}</a></h1>
       <p>${escapeHTML(project.description)}</p>
     </div>
     <div class="featured-controls" aria-label="Selected work carousel controls">
@@ -72,7 +72,7 @@ function renderFeatured(project, count, index = 0) {
 function renderProjects(projects) {
   const grid = document.querySelector("#project-grid");
   grid.innerHTML = projects.map((project, index) => `
-    <a id="project-${escapeHTML(project.slug)}" class="project-card reveal" href="project.html?slug=${encodeURIComponent(project.slug)}" style="--card-accent:${safeColor(project.accent)}">
+    <a id="project-${escapeHTML(project.slug)}" class="project-card reveal" href="case-${encodeURIComponent(project.slug)}.html" style="--card-accent:${safeColor(project.accent)}">
       <div class="project-media">
         ${renderArt(project)}
         <div class="card-tags" aria-label="Project categories">

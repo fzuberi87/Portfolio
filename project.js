@@ -76,6 +76,13 @@ function parseCaseStudyDocument(markdown = "", sourceHeading = "") {
 
 async function init() {
   const container = document.querySelector("#project-detail");
+  if (container.dataset.static === "true") {
+    document.querySelectorAll("[data-theme-compare]").forEach((compare) => {
+      const range = compare.querySelector(".theme-compare-range");
+      range.addEventListener("input", () => compare.style.setProperty("--compare-position", `${range.value}%`));
+    });
+    return;
+  }
   try {
     const [response, sourceResponse] = await Promise.all([
       fetch("content/projects.json?v=20261006-1"),
