@@ -5,11 +5,19 @@ const escapeHTML = (value = "") => String(value).replace(/[&<>'"]/g, (character)
 const params = new URLSearchParams(window.location.search);
 const slug = params.get("slug");
 
+const fallbackAssetPath = (source = "") => {
+  if (!source.endsWith(".webp")) return source;
+  if (source === "media/projects/creamwala/uniform.webp") return "media/projects/creamwala/uniform.png";
+  if (source.startsWith("media/projects/redfin-renovations/")) return source.replace(/\.webp$/i, ".png");
+  if (source.startsWith("media/projects/allie/")) return source.replace(/\.webp$/i, ".png");
+  return source.replace(/\.webp$/i, ".jpg");
+};
+
 const inlineMarkdown = (value = "") => {
   const images = [];
   const source = String(value).replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => {
     const token = `@@IMAGE_${images.length}@@`;
-    images.push(`<img class="rich-inline-image" src="${escapeHTML(src)}" alt="${escapeHTML(alt)}" loading="lazy" decoding="async" />`);
+    images.push(`<img class="rich-inline-image" src="${escapeHTML(src)}" alt="${escapeHTML(alt)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHTML(fallbackAssetPath(src))}'" />`);
     return token;
   });
   return images.reduce((html, image, index) => html.replace(`@@IMAGE_${index}@@`, image), escapeHTML(source)
@@ -70,8 +78,8 @@ async function init() {
   const container = document.querySelector("#project-detail");
   try {
     const [response, sourceResponse] = await Promise.all([
-      fetch("content/projects.json?v=20261005-3"),
-      fetch("content/Portfolio Case Studies (Rewritten).md?v=20261005-4"),
+      fetch("content/projects.json?v=20261006-1"),
+      fetch("content/Portfolio Case Studies (Rewritten).md?v=20261006-1"),
     ]);
     if (!response.ok || !sourceResponse.ok) throw new Error("Project content could not be loaded.");
     const [payload, sourceMarkdown] = await Promise.all([response.json(), sourceResponse.text()]);
@@ -87,15 +95,15 @@ async function init() {
     const gallery = project.gallery || [];
     const renderImage = (image, index, extraClass = "") => `
       <figure class="project-visual ${extraClass}">
-        <img src="${escapeHTML(image)}" alt="${escapeHTML(project.title)} detail ${index + 1}" loading="lazy" decoding="async" />
+        <img src="${escapeHTML(image)}" alt="${escapeHTML(project.title)} detail ${index + 1}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHTML(fallbackAssetPath(image))}'" />
       </figure>
     `;
     const renderComparison = (comparison) => comparison ? `
       <figure class="project-visual project-visual--comparison">
         <div class="theme-compare" data-theme-compare style="--compare-position: 50%">
-          <img class="theme-compare-image theme-compare-image--dark" src="${escapeHTML(comparison.dark)}" alt="${escapeHTML(project.title)} interface in dark mode" loading="lazy" decoding="async" />
+          <img class="theme-compare-image theme-compare-image--dark" src="${escapeHTML(comparison.dark)}" alt="${escapeHTML(project.title)} interface in dark mode" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHTML(fallbackAssetPath(comparison.dark))}'" />
           <div class="theme-compare-overlay">
-            <img class="theme-compare-image theme-compare-image--light" src="${escapeHTML(comparison.light)}" alt="${escapeHTML(project.title)} interface in light mode" loading="lazy" decoding="async" />
+            <img class="theme-compare-image theme-compare-image--light" src="${escapeHTML(comparison.light)}" alt="${escapeHTML(project.title)} interface in light mode" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHTML(fallbackAssetPath(comparison.light))}'" />
           </div>
           <div class="theme-compare-divider" aria-hidden="true"><span>↔</span></div>
           <input class="theme-compare-range" type="range" min="0" max="100" value="50" aria-label="Compare light and dark mode" />
@@ -122,7 +130,7 @@ async function init() {
     `).join("");
     const leadImage = gallery[0] ? renderImage(gallery[0], 0, "project-visual--lead") : "";
     const hero = project.hero || project.cover
-      ? `<img src="${escapeHTML(project.hero || project.cover)}" alt="${escapeHTML(project.title)}" loading="eager" fetchpriority="high" decoding="async" />`
+      ? `<img src="${escapeHTML(project.hero || project.cover)}" alt="${escapeHTML(project.title)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='${escapeHTML(fallbackAssetPath(project.hero || project.cover))}'" />`
       : `<div class="project-hero-placeholder" style="--placeholder-bg:${escapeHTML(project.accent || "#c8d89e")}"><span>${escapeHTML(project.artLabel || project.title)}</span></div>`;
     container.innerHTML = `
       <div class="project-hero">

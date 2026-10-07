@@ -13,13 +13,23 @@ const safeColor = (value, fallback = "#d4ddaa") => /^#[0-9a-f]{6}$/i.test(value 
 
 const artThemes = new Set(["orbit", "signal", "lattice", "field", "blank"]);
 
+const fallbackAssetPath = (source = "") => {
+  if (!source.endsWith(".webp")) return source;
+  if (source === "media/projects/allie/cover.webp") return "media/projects/allie/cover.png";
+  if (source === "media/projects/creamwala/uniform.webp") return "media/projects/creamwala/uniform.png";
+  if (source.startsWith("media/projects/redfin-renovations/")) return source.replace(/\.webp$/i, ".png");
+  if (source.startsWith("media/projects/allie/")) return source.replace(/\.webp$/i, ".png");
+  return source.replace(/\.webp$/i, ".jpg");
+};
+
 function renderArt(project, extraClass = "") {
   const theme = artThemes.has(project.theme) ? project.theme : "orbit";
   const label = project.artLabel || project.title;
   const accent = safeColor(project.accent);
   if (project.cover) {
     const isFeatured = extraClass.includes("featured-art");
-    return `<div class="project-art image-art ${theme} ${extraClass}" style="--art-bg:${accent}"><img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)} project artwork" loading="${isFeatured ? "eager" : "lazy"}"${isFeatured ? ' fetchpriority="high"' : ""} decoding="async" /></div>`;
+    const fallback = fallbackAssetPath(project.cover);
+    return `<div class="project-art image-art ${theme} ${extraClass}" style="--art-bg:${accent}"><img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)} project artwork" loading="${isFeatured ? "eager" : "lazy"}"${isFeatured ? ' fetchpriority="high"' : ""} decoding="async" onerror="this.onerror=null;this.src='${escapeHTML(fallback)}'" /></div>`;
   }
   return `<div class="project-art ${theme} ${extraClass}" style="--art-bg:${accent};--art-ink:${theme === "signal" ? "#f4e9f4" : "#10110f"}"><span class="art-word">${escapeHTML(label)}</span></div>`;
 }
@@ -197,7 +207,7 @@ function setupClock() {
 
 async function init() {
   try {
-    const [siteResponse, projectsResponse] = await Promise.all([fetch("content/site.json?v=20260922-5"), fetch("content/projects.json?v=20260930-4")]);
+    const [siteResponse, projectsResponse] = await Promise.all([fetch("content/site.json?v=20260922-5"), fetch("content/projects.json?v=20261006-1")]);
     if (!siteResponse.ok || !projectsResponse.ok) throw new Error("Content files could not be loaded.");
     const [site, projectPayload] = await Promise.all([siteResponse.json(), projectsResponse.json()]);
     const projects = (projectPayload.projects || []).filter((project) => project.published !== false);
