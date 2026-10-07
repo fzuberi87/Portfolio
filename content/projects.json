@@ -15,25 +15,25 @@
       "accent": "#c8d89e",
       "featured": true,
       "published": true,
-      "cover": "media/projects/allie/cover-large.webp",
-      "hero": "media/projects/allie/cover-large.webp",
+      "cover": "media/projects/allie/cover-large.jpg",
+      "hero": "media/projects/allie/cover-large.jpg",
       "gallery": [],
       "comparison": {
-        "light": "media/projects/allie/new-chat-light.webp",
-        "dark": "media/projects/allie/new-chat-dark.webp",
+        "light": "media/projects/allie/new-chat-light.png",
+        "dark": "media/projects/allie/new-chat-dark.png",
         "label": "Light and dark mode"
       },
       "sectionImages": {
-      "Overview": ["media/projects/allie/allie-in-context.webp"],
-        "Research": ["media/projects/allie/allie-old.webp"],
+      "Overview": ["media/projects/allie/allie-in-context.png"],
+        "Research": ["media/projects/allie/allie-old.png"],
         "Building the design system": [
-          "media/projects/allie/allie-colors.webp",
-          "media/projects/allie/allie-components.webp",
-          "media/projects/allie/allie-component-states.webp"
+          "media/projects/allie/allie-colors.png",
+          "media/projects/allie/allie-components.png",
+          "media/projects/allie/allie-component-states.png"
         ],
         "Designing with AI in the loop": [
-          "media/projects/allie/designing-with-ai.webp",
-          "media/projects/allie/process-with-ai.webp"
+          "media/projects/allie/designing-with-ai.png",
+          "media/projects/allie/process-with-ai.png"
         ]
       },
       "url": "",
@@ -54,9 +54,9 @@
       "accent": "#86cfd1",
       "featured": false,
       "published": true,
-      "cover": "media/projects/codeai-redesign/cover.webp",
-      "hero": "media/projects/codeai-redesign/hero.webp",
-      "gallery": ["media/projects/codeai-redesign/gallery-01.webp", "media/projects/codeai-redesign/gallery-02.webp"],
+      "cover": "media/projects/codeai-redesign/cover.jpg",
+      "hero": "media/projects/codeai-redesign/hero.jpg",
+      "gallery": ["media/projects/codeai-redesign/gallery-01.jpg", "media/projects/codeai-redesign/gallery-02.jpg"],
       "url": "https://www.carislifesciences.com/",
       "sections": []
     },
@@ -75,9 +75,9 @@
       "accent": "#d39a81",
       "featured": false,
       "published": true,
-      "cover": "media/projects/redfin-renovations/cover.webp",
+      "cover": "media/projects/redfin-renovations/cover.jpg",
       "hero": "",
-      "gallery": ["media/projects/redfin-renovations/journey.webp", "media/projects/redfin-renovations/change-order.webp", "media/projects/redfin-renovations/final-design.webp"],
+      "gallery": ["media/projects/redfin-renovations/journey.png", "media/projects/redfin-renovations/change-order.png", "media/projects/redfin-renovations/final-design.png"],
       "url": "https://www.redfin.com",
       "sections": []
     },
@@ -96,14 +96,14 @@
       "accent": "#d7c19e",
       "featured": false,
       "published": true,
-      "cover": "media/projects/creamwala/cover.webp",
+      "cover": "media/projects/creamwala/cover.jpg",
       "hero": "",
-      "gallery": ["media/projects/creamwala/gallery-01.webp", "media/projects/creamwala/gallery-02.webp", "media/projects/creamwala/gallery-03.webp"],
+      "gallery": ["media/projects/creamwala/gallery-01.jpg", "media/projects/creamwala/gallery-02.jpg", "media/projects/creamwala/gallery-03.jpg"],
       "sectionImages": {
-        "Introduction": ["media/projects/creamwala/ice-cream-cups-mockup.webp"],
+        "Introduction": ["media/projects/creamwala/ice-cream-cups-mockup.jpg"],
         "Execution": [
-          "media/projects/creamwala/gallery-04.webp",
-          "media/projects/creamwala/gallery-05.webp"
+          "media/projects/creamwala/gallery-04.jpg",
+          "media/projects/creamwala/gallery-05.jpg"
         ]
       },
       "url": "https://creamwala.com",
@@ -124,9 +124,9 @@
       "accent": "#c3b393",
       "featured": false,
       "published": true,
-      "cover": "media/projects/little-bites-urdu/cover.webp",
+      "cover": "media/projects/little-bites-urdu/cover.jpg",
       "hero": "",
-      "gallery": ["media/projects/little-bites-urdu/gallery-01.webp", "media/projects/little-bites-urdu/gallery-02.webp"],
+      "gallery": ["media/projects/little-bites-urdu/gallery-01.jpg", "media/projects/little-bites-urdu/gallery-02.jpg"],
       "url": "https://littlebitesofurdu.com",
       "sections": []
     }
