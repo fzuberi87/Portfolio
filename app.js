@@ -18,7 +18,8 @@ function renderArt(project, extraClass = "") {
   const label = project.artLabel || project.title;
   const accent = safeColor(project.accent);
   if (project.cover) {
-    return `<div class="project-art image-art ${theme} ${extraClass}" style="--art-bg:${accent}"><img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)} project artwork" loading="lazy" /></div>`;
+    const isFeatured = extraClass.includes("featured-art");
+    return `<div class="project-art image-art ${theme} ${extraClass}" style="--art-bg:${accent}"><img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)} project artwork" loading="${isFeatured ? "eager" : "lazy"}"${isFeatured ? ' fetchpriority="high"' : ""} decoding="async" /></div>`;
   }
   return `<div class="project-art ${theme} ${extraClass}" style="--art-bg:${accent};--art-ink:${theme === "signal" ? "#f4e9f4" : "#10110f"}"><span class="art-word">${escapeHTML(label)}</span></div>`;
 }
